@@ -1,0 +1,16 @@
+{
+  "name": "2nd-creative-code-lap",
+  "version": "1.0.0",
+  "description": "This is the project for the second creative code laps - social media platform",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.nwt.fhstp.ac.at/cc201010/2nd-creative-code-lap.git"
+  },
+  "author": "Omar Fares",
+  "license": "ISC"
+}
+
