@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="loginPage.css">
+</head>
+<body>
+<div class="Main-container">
+
+    <div class="container-login">
+
+        <div class="login-description">
+            <img class="login-logo" src="images/logo.png" alt="logo">
+            <h1 class="login-description-title">Welcome to login </h1>
+            <p class="login-description-subtitle">Do you have an account? </p>
+            <button class="btn-sign-up">Sing Up</button>
+        </div>
+
+        <div class="login-form-wrap">
+            <form class="login-form" action="/login" method="post">
+                <h1 class="login-form-title">Login into your account</h1>
+                <h5 class="login-form-subtitle">Lets interact with others</h5>
+                <label class="filed-labels">username</label>
+                <input type="text" id="username-field" name="username" placeholder="Enter your username" value=""/>
+                <label class="filed-labels">password</label>
+                <input type="password" id="password-field" name="password" placeholder="Enter your password" value=""/>
+                <input id="btn-login" type="submit" value="Login"/>
+                <p class="remb-txt"><input class="checkbox" type="checkbox">Remember Me</p>
+                <p class="forg-txt">Forget Password</p>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+
+</body>
+</html>
