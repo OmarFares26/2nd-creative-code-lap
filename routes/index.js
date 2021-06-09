@@ -4,8 +4,11 @@ const express = require('express');
 const router = express.Router();
 //require authentication
 const authenticationService = require('../services/authentication');
+//require controller
+const userController = require('../controllers/userController');
 //require userModel
 const userModel = require('../models/userModel');
+
 
 
 
@@ -13,6 +16,13 @@ const userModel = require('../models/userModel');
 router.get('/', (req, res) => {
     res.send('Hello World!')
 });
+
+
+
+// router.get('/:id/marketPlace',userController.getProduct);
+// router.get('/marketPlace', (req, res) => {
+//     res.render('marketPlace')
+// });
 
 
 router.route('/login')
@@ -27,6 +37,11 @@ router.route('/login')
             authenticationService.authenticateUser(req.body, users, res)
         })
     })
+
+router.post('/logout', (req, res) => {
+    res.cookie('accessToken', '', {maxAge: 0});
+    res.redirect('/login')
+})
 
 
 

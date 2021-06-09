@@ -5,11 +5,250 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>FEEDPAGE</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/feedPage.css">
+    <title>FEED PAGE</title>
 </head>
-<body>
 
-<h1>HERE IS THE FEED PAGE </h1>
+
+<div class="main-container">
+    <div class="side-rectangle-container">
+        <div class="side-nav-rectangle">
+            <img class="side-nav-logo" src="/images/logo.png" alt="logo">
+            <div class="icons">
+                <i id="side-nav-icon-special" class="fa fa-home fa-2x" aria-hidden="true"></i>
+                <i id="side-nav-icon" class="fa fa-users fa-2x" aria-hidden="true"></i>
+                <i id="side-nav-icon" class="fa fa-comments-o fa-2x" aria-hidden="true"></i>
+                <i id="side-nav-icon" class="fa fa-bell-o fa-2x" aria-hidden="true"></i>
+                <i id="side-nav-icon" class="fa fa-calendar fa-2x" aria-hidden="true"></i>
+                <i  onclick="marketPlace()" id="side-nav-icon" class="fa fa-university fa-2x" aria-hidden="true"></i>
+                <i id="side-nav-icon-settings" class="fa fa-cogs fa-2x" aria-hidden="true"></i>
+                <form class="logout-hidden" method="post" action="/logout">
+                    <button class="logout-btn" type="submit">
+                        <i id="logout-icon" class="fa fa-sign-out" aria-hidden="true"></i>
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="main-body-container">
+        <header class="pageHeader">
+            <div class="search-bar-container">
+                <input class="search-bar-box" type="search" placeholder="Search for friends here">
+                <button class="btn-search">
+                    <i class="fa fa-search fa-1x" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <div class="upper-nav1">
+                <ul class="upper-nav">
+                    <li class="special-option">Home</li>
+                    <li>Friends</li>
+                    <li>Events</li>
+                    <li>Market place</li>
+                </ul>
+            </div>
+
+            <div class="profile-bar">
+                <% for (let i = 0; i < user.length; i++) { %>
+                    <img class="profile-bar-Img" src="<%= user[i].image %>" alt="profilePicture">
+                <% } %>
+                <i id="dotsIcon" class="fa fa-ellipsis-v fa-2x" aria-hidden="true"></i>
+            </div>
+        </header>
+        <div class="inner-body">
+
+            <div class="leftRect">
+
+                <div class="profileDetails-container">
+                    <% for (let i = 0; i < user.length; i++) { %>
+                        <img class="profileImg" src="<%= user[i].image %>" alt="profilePicture">
+                    <div class="profileName-container">
+                        <p class="profileName"><%= user[i].name %></p>
+                        <p class="profile-nickName"><%= user[i].username %></p>
+                        <% } %>
+                    </div>
+                </div>
+                <div class="side-options-container">
+                    <div class="side-options-box-highlighted">
+                        <i id="side-options-Icons" class="fa fa-th-large fa-2x" aria-hidden="true"></i>
+                        <p class="side-options-text">Feed</p>
+                    </div>
+                    <div class="side-options-box">
+                        <i id="side-options-Icons" class="fa fa-users fa-2x" aria-hidden="true"></i>
+                        <p class="side-options-text-special">Find Friends</p>
+                    </div>
+                    <div class="side-options-box">
+                        <i id="side-options-Icons" class="fa fa-comments-o fa-2x" aria-hidden="true"></i>
+                        <p class="side-options-text">Chat</p>
+                    </div>
+                    <div class="side-options-box">
+                        <i id="side-options-Icons" class="fa fa-bell-o fa-2x" aria-hidden="true"></i>
+                        <p class="side-options-text-special">Notifications</p>
+                    </div>
+                    <div class="side-options-box-hidden">
+                        <i id="side-options-Icons" class="fa fa-globe fa-2x" aria-hidden="true"></i>
+                        <p class="side-options-text">Groups</p>
+                    </div>
+                </div>
+                <form class="logout" method="post" action="/logout">
+                   <button class="logout-btn" type="submit">
+                       <i id="logout-icon" class="fa fa-sign-out" aria-hidden="true"></i>
+                   </button>
+                    <p class="logout-txt">LogOut</p>
+                </form>
+            </div>
+
+            <div class="rightRect">
+
+                <div class="creat-post-side">
+
+
+                    <div class="user-mind-post">
+                        <% for (let i = 0; i < user.length; i++) { %>
+                            <form method="post" action="/users/<%= user[i].id %>/Post">
+                                <div class="creat-post-container">
+                                    <div class="user-post">
+                                        <div class="profile-img-user-post-box">
+                                            <img class="profile-img-user-post" src="<%= user[i].image %>"
+                                                 alt="profilePicture">
+                                        </div>
+                                        <div class="text-area-box">
+                                            <textarea name="writePost"  class="text-area"
+                                                      placeholder="What's on your mind , <%= user[i].name %>?"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="additional-post-options">
+                                        <button type="submit" class="btn-post">Post</button>
+                                        <i id="post-options" class="fa fa-plus-square-o fa-2x" aria-hidden="true"></i>
+                                        <i id="post-options" class="fa fa-picture-o fa-2x" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </form>
+                        <% } %>
+                    </div>
+                    <div class="posts-cards-container">
+
+                        <div class="implemented-posts-boxes">
+                            <div class="post-profile-details">
+                                <% for (let i = 0; i < user.length; i++) { %>
+                                    <img class="post-profile-details-img" src="<%= user[i].image %>"
+                                         alt="profilePicture">
+                                    <div class="post-profile-details-txt">
+                                        <p class="profile-det-name"><%= user[i].name %></p>
+                                        <p class="profile-det-date">Just now</p>
+                                    </div>
+                                     <!--<div class="delete-post-box">-->
+                                    <!--<i id="delete-post-icons" class="fa fa-times" aria-hidden="true"></i>-->
+                                    <!--</div>-->
+                                <% } %>
+                            </div>
+                            <div class="post-caption-container">
+                                <% for (let i = 0; i < user.length; i++) { %>
+                                    <h3 class="post-caption"><%= user[i].postCaption %> </h3>
+                                    <img class="caption-Image" src="<%= user[i].postImage %>" alt="mountainImage">
+                                    <div class="post-caption-options">
+                                        <i id="caption-icons-actions" class="fa fa-thumbs-up" aria-hidden="true"></i>
+                                        <i id="caption-icons-actions" class="fa fa-comment" aria-hidden="true"></i>
+                                        <i id="caption-icons-actions" class="fa fa-share-alt " aria-hidden="true"></i>
+                                    </div>
+                                <% } %>
+                            </div>
+                        </div>
+                        <% for (let i = 0; i < posts.length; i++) { %>
+                            <div class="implemented-posts-boxes">
+                                <div class="post-profile-details">
+                                    <% for (let j = 0; j < user.length; j++) { %>
+                                        <img class="post-profile-details-img" src="<%= user[j].image %>"
+                                             alt="profilePicture">
+                                        <div class="post-profile-details-txt">
+                                            <p class="profile-det-name"><%= user[j].name %></p>
+                                            <p class="profile-det-date"><%= posts[i].post_date%></p>
+                                        </div>
+                                        <form method="post" action="/users/<%= posts[i].userId%>/<%= posts[i].id %>/delete" class="delete-post-box">
+                                            <button class="delete-post-box" type="submit">
+                                                <i id="delete-post-icons" class="fa fa-times" aria-hidden="true"></i>
+                                            </button>
+                                        </form>
+                                        <% } %>
+                                </div>
+
+                                <div class="post-caption-container">
+                                    <P class="user-written-post"><%= posts[i].Written_Posts %></P>
+                                    <div class="post-caption-options">
+                                        <i id="caption-icons-actions" class="fa fa-thumbs-up" aria-hidden="true"></i>
+                                        <i id="caption-icons-actions" class="fa fa-comment" aria-hidden="true"></i>
+                                        <i id="caption-icons-actions" class="fa fa-share-alt " aria-hidden="true"></i>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        <% } %>
+                    </div>
+
+                </div>
+
+                <div class="user-friends-groups-container">
+                    <div class="groups-container">
+                        <div class="groups-container-title">
+                            <p class="add-group-txt">Groups</p>
+                            <i id="search-group-icon" class="fa fa-search fa-2x" aria-hidden="true"></i>
+                        </div>
+                        <div class="enrolled-groups">
+                            <div class="enrolled-groups-icons-box">
+                                <i id="enrolled-groups-icons" class="fa fa-gamepad fa-2x" aria-hidden="true"></i>
+                                <P class="enrolled-groups-icon-txt">Gaming Community</P>
+                            </div>
+                            <div class="enrolled-groups-icons-box">
+                                <i id="enrolled-groups-icons" class="fa fa-graduation-cap fa-2x" aria-hidden="true"></i>
+                                <P class="enrolled-groups-icon-txt">School Community</P>
+                            </div>
+                            <div class="enrolled-groups-icons-box">
+                                <i id="enrolled-groups-icons" class="fa fa-futbol-o fa-2x" aria-hidden="true"></i>
+                                <P class="enrolled-groups-icon-txt">Sports Community</P>
+                            </div>
+                            <div class="enrolled-groups-icons-box">
+                                <i id="enrolled-groups-icons" class="fa fa-map-pin fa-2x" aria-hidden="true"></i>
+                                <P class="enrolled-groups-icon-txt">Travel Community</P>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<script>
+    // var today = new Date();
+    // var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+    // var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    // var dateTime = date+' '+time;
+    //
+    // document.getElementsByClassName('profile-det-nickname')
+
+
+    // var x = document.getElementsByClassName('profile-det-nickname')
+    // for(i=0;i<x.length;i++){
+    //     x[i].innerHTML = dateTime;
+    // }
+
+
+    // document.querySelector('.profile-det-nickname').innerHTML = 'date';
+
+
+    <% for (let i = 0; i < user.length; i++) { %>
+    function marketPlace(){
+        window.location.replace("/users/<%= user[i].id %>/shop/marketPlace")
+    }
+    <%}%>
+</script>
 
 </body>
 </html>

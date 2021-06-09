@@ -27,6 +27,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/public'));
 
 
+
 //Import the routers into app.js
 const indexRouter = require('./routes/index')
 //use the router for the desired route

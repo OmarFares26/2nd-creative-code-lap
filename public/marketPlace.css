@@ -1,0 +1,217 @@
+#side-nav-icon-marketPlace{
+    margin-left: 18%;
+    margin-bottom: 40%;
+    padding: 8px 8px 8px 8px;
+    border-radius: 10px 10px 10px 10px;
+    background-color: white;
+    color: #f75959;
+    width: 50px;
+    height: 45px;
+}
+.marketPlace-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.categories-box {
+    width: 90%;
+    height: 20%;
+    margin: 0 auto;
+    margin-top: 2%;
+    padding: 1%;
+    background-color: white;
+    border-radius: 15px 15px 15px 15px;
+    display: flex;
+    flex-direction: row;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
+}
+
+.categories-searching-box {
+    margin-top: 1%;
+    margin-left: 2%;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: 80%;
+}
+
+.categories-title {
+    font-weight: 800;
+}
+
+.categories-title {
+    text-align: left;
+
+}
+
+.categories-search-bar-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 4%;
+}
+
+.categories-search-bar {
+    outline: none;
+    border: none;
+    padding: 5%;
+    line-height: 1.5;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px 5px 5px 5px;
+    background-color: rgba(203, 211, 219, 0.26);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.btn-categories-search {
+    margin-left: -50px;
+    margin-top: 2%;
+    width: 15%;
+    height: 80%;
+    padding: 4px 4px 4px 4px;
+    color: white;
+    background-color: #f75959;
+    border-radius: 10px 10px 10px 10px;
+    border: none;
+}
+
+.categories-icons-container {
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+
+    margin-left: 3%;
+}
+
+.categories-icons-box {
+    margin-left: 1%;
+    width: 100%;
+    padding-top: 2%;
+}
+
+#categories-icons-action {
+    color: white;
+    background-color: #f75959;
+    width: 60%;
+    padding: 12%;
+    border-radius: 80px 80px 80px 80px;
+}
+
+.categories-icons-txt {
+    margin-top: 3%;
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+.marketPlace-lowerpart-container {
+    margin-top: 3%;
+    display: flex;
+    flex-direction: row;
+}
+
+.marketPlace-lowerpart-box {
+    display: flex;
+    flex-direction: row;
+    margin-left: 4%;
+    width: 25%;
+}
+
+#marketPlace-lowerpart-icon {
+    color: #f75959;
+    margin-right: 2%;
+    margin-top: 1%;
+}
+
+.marketPlace-lowerpart-txt {
+    font-weight: 800;
+    font-size: 1.75rem;
+}
+
+.marketPlace-location-box {
+    width: 20%;
+    margin-left: 46%;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 10px 10px 10px 10px;
+    padding: 0.5%;
+}
+
+#marketPlace-location-icon {
+    margin-left: 4%;
+    color: black;
+}
+
+.marketPlace-location-txt {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-left: 2%;
+    color: black;
+    margin-top: 1.7%;
+}
+
+.products-cards-container {
+    /* border: 1px solid black;*/
+    margin: 0 auto;
+    margin-top: 4%;
+    width: 90%;
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.products-card-box {
+    /*border: 1px solid blue;*/
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12%;
+    width: 80%;
+    height: 250px;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
+}
+
+.products-card-img-box {
+    /*border: 1px solid red;*/
+}
+
+.products-card-img {
+    width: 100%;
+    height: 160px;
+    border-radius: 20px 20px 0px 0px;
+    margin-bottom: 0;
+}
+
+.products-card-details {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 3%;
+}
+
+.product-name {
+    font-weight: 700;
+    margin-bottom: 2%;
+}
+
+.product-price {
+    font-weight: 600;
+    margin-bottom: 2%;
+}
+
+.product-location {
+    color: #696F79;
+    font-size: 1rem;
+}
+
+
+
+

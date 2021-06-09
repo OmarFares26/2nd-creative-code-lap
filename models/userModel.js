@@ -1,12 +1,13 @@
+//require database
 const db = require('../services/database.js').config;
 
 
 function getUsers(cb) {
-    db.query("SELECT * FROM platformUsers", function (err, users, fields) {
+    db.query("SELECT * FROM platformUsers ", function (err, users, fields) {
         if (err) {
             cb(err)
         } //this is just for error handling
-        console.log(users);
+        // console.log(users);
         cb(null, users)
     });
 }
@@ -15,18 +16,72 @@ function getUser(cb, id) {
     let sql = "SELECT * FROM platformUsers WHERE id= " + parseInt(id);
     db.query(sql, function (err, user, fields) {
         if (err) {
-
             cb(err)
         }
-        console.log(user[0])
-        cb(null, user[0])
+        // console.log(user)
+        cb(null, user)
     });
-
 }
 
+function getProduct(cb,id) {
+   let sql = "SELECT * FROM platformUsers INNER JOIN productsCards WHERE platformUsers.id ="+ parseInt(id);
+   //    let sql = "SELECT * FROM productsCards" ;
+    //let sql = "SELECT p.*, c.* FROM platformUsers p, productsCards c WHERE p.id = c.id";
+
+
+    db.query(sql, function (err, product, fields) {
+        if (err) {
+            cb(err)
+        }
+        // console.log(product)
+        cb(null, product)
+    });
+}
+
+function sendPost(cb,userInput,id) {
+    // console.log(userInput)
+    db.query(`INSERT INTO usersPosts (Written_Posts , userId) VALUES (${db.escape(userInput.writePost)},${db.escape(id)})`, (err) =>{
+        if (err) {
+            cb(err)
+        }
+        cb(null)
+    })
+
+    //let sql = "INSERT INTO usersPosts (Written_Posts) VALUES (${db.escape(userInput.writePost)})";
+   // console.log(sql
+}
+
+function getPosts(cb,id){
+    let sql = "SELECT * FROM usersPosts WHERE userId ="+id;
+    // console.log(sql)
+    db.query(sql, function (err, posts, fields){
+        if (err) {
+            cb(err, null)
+        }
+        // console.log(posts)
+        cb(null, posts)
+    });
+}
+
+
+function deletePost(id,cb) {
+    let sql = "DELETE  FROM usersPosts WHERE id ="+id ;
+    // console.log(sql)
+    db.query(sql, function (err, result, fields) {
+        if (err) {
+            cb(err)
+        }
+        cb(null, result);
+    })
+
+}
 
 //We export functions here so we can use them in the controller
 module.exports = {
     getUsers,
-    getUser
+    getUser,
+    getProduct,
+    sendPost,
+    getPosts,
+    deletePost
 }

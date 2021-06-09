@@ -9,33 +9,46 @@
     <link rel="stylesheet" type="text/css" href="loginPage.css">
 </head>
 <body>
-<div class="Main-container">
 
-    <div class="container-login">
+<div class="container-login">
 
-        <div class="login-description">
-            <img class="login-logo" src="images/logo.png" alt="logo">
-            <h1 class="login-description-title">Welcome to login </h1>
-            <p class="login-description-subtitle">Do you have an account? </p>
-            <button class="btn-sign-up">Sing Up</button>
-        </div>
+    <div class="login-description-container">
 
-        <div class="login-form-wrap">
-            <form class="login-form" action="/login" method="post">
-                <h1 class="login-form-title">Login into your account</h1>
-                <h5 class="login-form-subtitle">Lets interact with others</h5>
-                <label class="filed-labels">username</label>
-                <input type="text" id="username-field" name="username" placeholder="Enter your username" value=""/>
-                <label class="filed-labels">password</label>
-                <input type="password" id="password-field" name="password" placeholder="Enter your password" value=""/>
-                <input id="btn-login" type="submit" value="Login"/>
-                <p class="remb-txt"><input class="checkbox" type="checkbox">Remember Me</p>
-                <p class="forg-txt">Forget Password</p>
-            </form>
+        <div class="login-description-box">
+            <div class="title-description-container">
+                <h1 class="login-description-title">Welcome to login</h1>
+                <p class="login-description-subtitle">Do you have an account? </p>
+                <button class="btn-sign-up">Sign Up</button>
+            </div>
         </div>
 
     </div>
+
+    <div class="login-form-wrap">
+        <form class="login-form-container" action="/login" method="post">
+            <div class="login-form-inner-box">
+                <h1 class="login-form-title">Login into your account</h1>
+                <h5 class="login-form-subtitle">Lets interact with others</h5>
+                <div class="username">
+                    <label class="filed-labels">username</label>
+                    <input type="text" id="username-field" name="username" placeholder="Enter your username" value=""/>
+                </div>
+                <div class="password">
+                    <label class="filed-labels">password</label>
+                    <input type="password" id="password-field" name="password" placeholder="Enter your password"
+                           value=""/>
+                </div>
+
+                <div class="form-loginBtn">
+                    <input id="btn-login" type="submit" value="Login"/>
+                </div>
+                <p class="forg-txt">Forget Password?</p>
+            </div>
+        </form>
+    </div>
+
 </div>
+
 
 
 </body>

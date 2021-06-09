@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/marketPlace.css">
+    <link rel="stylesheet" type="text/css" href="/feedPage.css">
+    <title>MARKET PLACE</title>
+</head>
+
+
+<div class="main-container">
+
+    <div class="side-rectangle-container">
+        <div class="side-nav-rectangle">
+            <img class="side-nav-logo" src="/images/logo.png" alt="logo">
+            <div class="icons">
+                <i id="side-nav-icon" class="fa fa-home fa-2x" aria-hidden="true"></i>
+                <i id="side-nav-icon" class="fa fa-users fa-2x" aria-hidden="true"></i>
+                <i id="side-nav-icon" class="fa fa-comments-o fa-2x" aria-hidden="true"></i>
+                <i id="side-nav-icon" class="fa fa-bell-o fa-2x" aria-hidden="true"></i>
+                <i id="side-nav-icon" class="fa fa-calendar fa-2x" aria-hidden="true"></i>
+                <i id="side-nav-icon-marketPlace" class="fa fa-university fa-2x" aria-hidden="true"></i>
+                <i id="side-nav-icon-settings" class="fa fa-cogs fa-2x" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-body-container">
+
+        <header class="pageHeader">
+            <div class="search-bar-container">
+                <input class="search-bar-box" type="search" placeholder="Search for friends here">
+                <button class="btn-search">
+                    <i class="fa fa-search fa-1x" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <div class="upper-nav1">
+                <ul class="upper-nav">
+                    <li>Home</li>
+                    <li>Friends</li>
+                    <li>Events</li>
+                    <li class="special-option">Market place</li>
+                </ul>
+            </div>
+
+            <div class="profile-bar">
+
+                    <img class="profile-bar-Img" src="<%= product[0].image %>" alt="profilePicture">
+                    <i id="dotsIcon" class="fa fa-ellipsis-v fa-2x" aria-hidden="true"></i>
+
+            </div>
+        </header>
+        <div class="inner-body">
+
+            <div class="leftRect">
+
+                <div class="profileDetails-container">
+
+                        <img class="profileImg" src="<%= product[0].image %>" alt="profilePicture">
+                        <div class="profileName-container">
+                            <p class="profileName"><%= product[0].name %></p>
+                            <p class="profile-nickName"><%= product[0].username %></p>
+                        </div>
+
+                </div>
+                <div class="side-options-container">
+                    <div class="side-options-box-highlighted">
+                        <i id="side-options-Icons" class="fa fa-th-large fa-2x" aria-hidden="true"></i>
+                        <p class="side-options-text">Feed</p>
+                    </div>
+                    <div class="side-options-box">
+                        <i id="side-options-Icons" class="fa fa-users fa-2x" aria-hidden="true"></i>
+                        <p class="side-options-text-special">Find Friends</p>
+                    </div>
+                    <div class="side-options-box">
+                        <i id="side-options-Icons" class="fa fa-comments-o fa-2x" aria-hidden="true"></i>
+                        <p class="side-options-text">Chat</p>
+                    </div>
+                    <div class="side-options-box">
+                        <i id="side-options-Icons" class="fa fa-bell-o fa-2x" aria-hidden="true"></i>
+                        <p class="side-options-text-special">Notifications</p>
+                    </div>
+                </div>
+                <form class="logout" method="post" action="/logout">
+                    <button class="logout-btn" type="submit">
+                        <i id="logout-icon" class="fa fa-sign-out" aria-hidden="true"></i>
+                    </button>
+                    <p class="logout-txt">LogOut</p>
+                </form>
+            </div>
+            <div class="rightRect">
+                <div class="marketPlace-container">
+                    <div class="categories-box">
+                        <div class="categories-searching-box">
+                            <h2 class="categories-title">Categories</h2>
+                            <div class="categories-search-bar-container">
+                                <input class="categories-search-bar" type="search" placeholder="Search Categories here">
+                                <button class="btn-categories-search">
+                                    <i class="fa fa-search fa-1x" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="categories-icons-container">
+                            <div class="categories-icons-box">
+                                <i id="categories-icons-action" class="fa fa-mobile fa-2x" aria-hidden="true"></i>
+                                <p class="categories-icons-txt">Technology</p>
+                            </div>
+                            <div class="categories-icons-box">
+                                <i id="categories-icons-action" class="fa fa-futbol-o fa-2x" aria-hidden="true"></i>
+                                <p class="categories-icons-txt">Sports</p>
+                            </div>
+                            <div class="categories-icons-box">
+                                <i id="categories-icons-action" class="fa fa-motorcycle fa-2x" aria-hidden="true"></i>
+                                <p class="categories-icons-txt">Motorcycle</p>
+                            </div>
+                            <div class="categories-icons-box">
+                                <i id="categories-icons-action" class="fa fa-car fa-2x" aria-hidden="true"></i>
+                                <p class="categories-icons-txt"> Vehicle</p>
+                            </div>
+                            <div class="categories-icons-box">
+                                <i id="categories-icons-action" class="fa fa-pencil fa-2x" aria-hidden="true"></i>
+                                <p class="categories-icons-txt">Art</p>
+                            </div>
+                            <div class="categories-icons-box">
+                                <i id="categories-icons-action" class="fa fa-scissors fa-2x" aria-hidden="true"></i>
+                                <p class="categories-icons-txt">Crafts</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="marketPlace-lowerpart-container">
+                        <div class="marketPlace-lowerpart-box">
+                            <i id="marketPlace-lowerpart-icon" class="fa fa-university fa-2x" aria-hidden="true"></i>
+                            <h1 class="marketPlace-lowerpart-txt">Market Place</h1>
+                        </div>
+                        <div class="marketPlace-location-box">
+                            <i id="marketPlace-location-icon" class="fa fa-map-marker fa-2x" aria-hidden="true"></i>
+                            <p class="marketPlace-location-txt">Sankt pölten,80 KM</p>
+                        </div>
+                    </div>
+
+                    <div class="products-cards-container">
+                        <% for (let i = 0; i < product.length; i++) { %>
+                        <div class="products-card-box">
+
+                            <div class="products-card-img-box">
+                                    <img class="products-card-img" src="<%= product[i].productImage %>" alt="iphone11">
+                            </div>
+                            <div class="products-card-details">
+                                    <h3 class="product-name"><%= product[i].productName %></h3>
+                                    <h3 class="product-price">$<%= product[i].productPrice %></h3>
+                                    <h3 class="product-location"><%= product[i].productLocation %></h3>
+                            </div>
+
+                        </div>
+                            <% } %>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+</div>
+
+</body>
+</html>

@@ -10,6 +10,12 @@
 <body>
 
 <h1>WE SUCCEED FOR DOING THE LOGIN PAGE SUCCESSFULLY </h1>
+<% for (let i = 0; i < users.length; i++) { %>
+
+    <li><%= users[i].name %></li>
+    <li><%= users[i].username %></li>
+
+<% } %>
 
 </body>
 </html>
