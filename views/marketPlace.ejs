@@ -24,7 +24,10 @@
                 <i id="side-nav-icon" class="fa fa-bell-o fa-2x" aria-hidden="true"></i>
                 <i id="side-nav-icon" class="fa fa-calendar fa-2x" aria-hidden="true"></i>
                 <i id="side-nav-icon-marketPlace" class="fa fa-university fa-2x" aria-hidden="true"></i>
-                <i id="side-nav-icon-settings" class="fa fa-cogs fa-2x" aria-hidden="true"></i>
+                <i id="side-nav-icon" class="fa fa-cogs fa-2x" aria-hidden="true"></i>
+                <form class="logout-box" method="post" action="/logout">
+                    <i id="logout-icon" class="fa fa-sign-out fa-2x fa-rotate-180" aria-hidden="true"></i>
+                </form>
             </div>
         </div>
     </div>
@@ -33,10 +36,12 @@
 
         <header class="pageHeader">
             <div class="search-bar-container">
-                <input class="search-bar-box" type="search" placeholder="Search for friends here">
-                <button class="btn-search">
-                    <i class="fa fa-search fa-1x" aria-hidden="true"></i>
-                </button>
+                <div class="search-bar-box">
+                    <input class="search-bar" type="search" placeholder="Search for friends here">
+                    <button class="btn-search">
+                        <i class="fa fa-search fa-1x" aria-hidden="true"></i>
+                    </button>
+                </div>
             </div>
 
             <div class="upper-nav1">
@@ -48,11 +53,12 @@
                 </ul>
             </div>
 
-            <div class="profile-bar">
+            <div class="profile-bar-container">
+                <div class="profile-bar-box">
 
                     <img class="profile-bar-Img" src="<%= product[0].image %>" alt="profilePicture">
                     <i id="dotsIcon" class="fa fa-ellipsis-v fa-2x" aria-hidden="true"></i>
-
+                </div>
             </div>
         </header>
         <div class="inner-body">
@@ -61,11 +67,11 @@
 
                 <div class="profileDetails-container">
 
-                        <img class="profileImg" src="<%= product[0].image %>" alt="profilePicture">
-                        <div class="profileName-container">
-                            <p class="profileName"><%= product[0].name %></p>
-                            <p class="profile-nickName"><%= product[0].username %></p>
-                        </div>
+                    <img class="profileImg" src="<%= product[0].image %>" alt="profilePicture">
+                    <div class="profileName-container">
+                        <p class="profileName"><%= product[0].name %></p>
+                        <p class="profile-nickName"><%= product[0].username %></p>
+                    </div>
 
                 </div>
                 <div class="side-options-container">
@@ -86,12 +92,6 @@
                         <p class="side-options-text-special">Notifications</p>
                     </div>
                 </div>
-                <form class="logout" method="post" action="/logout">
-                    <button class="logout-btn" type="submit">
-                        <i id="logout-icon" class="fa fa-sign-out" aria-hidden="true"></i>
-                    </button>
-                    <p class="logout-txt">LogOut</p>
-                </form>
             </div>
             <div class="rightRect">
                 <div class="marketPlace-container">
@@ -101,7 +101,7 @@
                             <div class="categories-search-bar-container">
                                 <input class="categories-search-bar" type="search" placeholder="Search Categories here">
                                 <button class="btn-categories-search">
-                                    <i class="fa fa-search fa-1x" aria-hidden="true"></i>
+                                    <i id="search-icon-btn" class="fa fa-search fa-1x" aria-hidden="true"></i>
                                 </button>
                             </div>
                         </div>
@@ -132,8 +132,10 @@
                                 <p class="categories-icons-txt">Crafts</p>
                             </div>
 
+
                         </div>
                     </div>
+
 
                     <div class="marketPlace-lowerpart-container">
                         <div class="marketPlace-lowerpart-box">
@@ -148,27 +150,27 @@
 
                     <div class="products-cards-container">
                         <% for (let i = 0; i < product.length; i++) { %>
-                        <div class="products-card-box">
+                            <div class="products-card-box">
 
-                            <div class="products-card-img-box">
+                                <div class="products-card-img-box">
                                     <img class="products-card-img" src="<%= product[i].productImage %>" alt="iphone11">
-                            </div>
-                            <div class="products-card-details">
+                                </div>
+                                <div class="products-card-details">
                                     <h3 class="product-name"><%= product[i].productName %></h3>
                                     <h3 class="product-price">$<%= product[i].productPrice %></h3>
                                     <h3 class="product-location"><%= product[i].productLocation %></h3>
-                            </div>
+                                </div>
 
-                        </div>
-                            <% } %>
+                            </div>
+                        <% } %>
+                    </div>
                 </div>
+
             </div>
 
         </div>
 
     </div>
-
-</div>
 </div>
 
 </body>

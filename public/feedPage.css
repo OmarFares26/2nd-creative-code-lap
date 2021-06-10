@@ -17,37 +17,40 @@ body {
 .main-container {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    /*width: 100%;*/
 }
 
 .side-rectangle-container {
     width: 6%;
+    height: 100vh;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    height: 100vh;
 }
+
 .side-nav-rectangle {
-    background-color: #f75959;
-    width: 100%;
+    /*width: 100%;*/
     height: 100vh;
+    background-color: #f75959;
+    /*background: linear-gradient(135deg, #f75959 0%, #f35587 100%);*/
 }
 
 .side-nav-logo {
     width: 50px;
     height: 50px;
-    margin-left: 20%;
-    margin-top: 20%;
+    margin-left: 20px;
+    margin-top: 20px;
 }
 
 .icons {
     display: flex;
     flex-direction: column;
-    margin-top: 70%;
+    margin-top: 50px;
 }
+
 #side-nav-icon {
     margin: 0 auto;
-    margin-bottom: 40%;
+    margin-bottom: 25px;
     padding: 8px 8px 8px 8px;
     border-radius: 10px 10px 10px 10px;
     background-color: rgba(203, 211, 219, 0.26);
@@ -55,9 +58,10 @@ body {
     width: 50px;
     height: 45px;
 }
+
 #side-nav-icon-special {
     margin: 0 auto;
-    margin-bottom: 40%;
+    margin-bottom: 25px;
     padding: 8px 8px 8px 8px;
     border-radius: 10px 10px 10px 10px;
     background-color: white;
@@ -66,18 +70,29 @@ body {
     height: 45px;
 }
 
-#side-nav-icon-settings {
+.logout-box {
     margin: 0 auto;
-    width: 45px;
-    height: 35px;
-    margin-top: 90%;
-    color: white;
+    margin-top: 45px;
 }
-.main-body-container { /*IMPORTANT*/
-    width: 100%;
+
+#logout-icon {
+    padding: 8px 8px 8px 10px;
+    border-radius: 10px 10px 10px 10px;
+    background-color: rgba(203, 211, 219, 0.26);
+    color: black;
+    width: 50px;
+    height: 45px;
+}
+
+#logout-icon:hover {
+    cursor: pointer;
+    color: red;
+}
+
+.main-body-container {
+    width: 94%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
 .pageHeader {
@@ -85,102 +100,112 @@ body {
     flex-direction: row;
     background-color: white;
     width: 100%;
-    height: 10%;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1;
 }
+
 .upper-nav1 {
     width: 50%;
 }
+
 .upper-nav {
     list-style: none;
     text-align: center;
-    margin-top: 3.5%;
-    padding-bottom: 3%;
+    padding: 20px;
 }
+
 .upper-nav li {
     display: inline;
-    margin-right: 8%;
+    margin-right: 60px;
     color: #696F79;
     font-size: 1.15rem;
     font-weight: bold;
 }
+
 li.special-option {
     border-bottom: 5px solid #f75959;
-    padding-bottom: 2%;
+    padding-bottom: 10px;
     color: black;
 }
+
 .search-bar-container {
     width: 30%;
-    margin-top: 1%;
-    padding-left: 2.5%;
 }
+
 .search-bar-box {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.search-bar {
     outline: none;
     border: none;
     padding: 10px 10px;
     line-height: 1.5;
     width: 80%;
-    height: 80%;
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 0px 0px 10px;
     background-color: rgba(203, 211, 219, 0.26);
     font-size: 1rem;
 }
+
 .btn-search {
-    margin-left: -50px;
-    width: 10%;
-    height: 60%;
-    padding: 4px 4px 4px 4px;
+    width: 15%;
     color: white;
     background-color: #f75959;
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 0px 15px 15px 0px;
     border: none;
+    font-size: 1.3rem;
 }
-.profile-bar {
+
+.profile-bar-container {
     width: 20%;
-    margin-top: 1%;
+}
+
+.profile-bar-box {
     display: flex;
     flex-direction: row;
+    right: 0;
+    margin-right: 15px;
+    margin-top: 10px;
+    position: absolute;
 }
+
 .profile-bar-Img {
     width: 45px;
     height: 45px;
     border-radius: 100px 100px 100px 100px;
-    margin-left: 70%;
 }
+
 #dotsIcon {
     color: #696F79;
-    margin-top: 4%;
-    margin-left: 2%;
+    padding-top: 10px;
+    padding-left: 4px;
 }
+
 .inner-body {
-    color: black;
-    width: 100%;
-    height: 100%;
-    text-align: center;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
-    order: 1;
-}
-.leftRect {
-    position: sticky;
-    top: 0;
-    width: 20%;
     height: 100%;
+}
+
+.leftRect {
+    width: 20%;
     background-color: white;
     border-radius: 0px 5px 5px 0px;
     display: flex;
     flex-direction: column;
-    margin-top: 0;
-    align-self: flex-start;
-    /*position: fixed;*/
-    /*top: 9.35%;*/
-    /*left: 50%;*/
-    /*margin-left: -44.3%;*/
 }
+
+.sticky-box {
+    position: sticky;
+    top: 65px;
+}
+
 .profileDetails-container {
     width: 85%;
     margin-top: 4%;
@@ -191,6 +216,7 @@ li.special-option {
     border-radius: 30px 30px 30px 30px;
     padding: 5px 5px 5px 0px;
 }
+
 .profileImg {
     border: 1px solid #f75959;
     width: 55px;
@@ -198,27 +224,32 @@ li.special-option {
     border-radius: 100px 100px 100px 100px;
     margin-left: 4%;
 }
+
 .profileName-container {
     display: flex;
     flex-direction: column;
     margin-left: 2%;
     width: 60%;
 }
+
 .profileName {
     font-size: 1.2rem;
     font-weight: bold;
     margin-top: 4%;
     text-align: left;
 }
+
 .profile-nickName {
     color: #696F79;
     text-align: left;
 }
+
 .side-options-container {
     display: flex;
     flex-direction: column;
     margin-top: 10%;
 }
+
 .side-options-box-highlighted {
     background-color: rgba(203, 211, 219, 0.26);
     display: flex;
@@ -228,6 +259,7 @@ li.special-option {
     margin-bottom: 4%;
     width: 100%;
 }
+
 .side-options-box {
     display: flex;
     flex-direction: row;
@@ -236,9 +268,8 @@ li.special-option {
     margin-bottom: 4%;
     width: 100%;
 }
-.side-options-box-hidden{
-    /*display: flex;*/
-    /*flex-direction: row;*/
+
+.side-options-box-hidden {
     padding-top: 1%;
     padding-bottom: 1%;
     margin-bottom: 4%;
@@ -265,105 +296,77 @@ li.special-option {
     color: #f75959;
     margin-left: 5%;
 }
-.logout-hidden{
-    margin: 0 auto;
-    margin-top: 5%;
-    display: flex;
-    flex-direction: row;
-    width: 50%;
-    display: none;
-}
-.logout{
-    margin: 0 auto;
-    margin-top: 80%;
-    display: flex;
-    flex-direction: row;
-    width: 50%;
-}
-.logout-btn
-{
-    border: none;
-    background: none;
-}
-#logout-icon{
-    text-align: center;
-    font-size: 2.2rem;
-    color: black;
-}
-.logout-txt{
-    margin-left: 2%;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: black;
-}
-#logout-icon:hover,.logout-txt:hover{
-    cursor: pointer;
-    color: red;
-}
+
 .rightRect {
     width: 80%;
-    height: 100%;
     text-align: center;
     display: flex;
     flex-direction: row;
 }
+
 .creat-post-side {
     width: 90%;
     display: flex;
     flex-direction: column;
 }
+
 .user-mind-post {
     width: 100%;
-    margin-top: 2%;
+    margin-top: 32px;
 }
+
 .creat-post-container {
     background-color: white;
     width: 80%;
-    margin-left: 10%;
-    padding: 1%;
-    margin-top: 2%;
+    margin: 0 auto;
+    padding: 8px;
     border-radius: 20px 20px 20px 20px;
 }
+
 .user-post {
     width: 100%;
     display: flex;
     flex-direction: row;
-    padding: 2%;
+    padding: 8px;
 }
+
 .profile-img-user-post-box {
-    /* margin-left: 5%;*/
+
 }
+
 .profile-img-user-post {
     width: 55px;
     height: 55px;
     border-radius: 100px 100px 100px 100px;
 }
+
 .text-area-box {
     box-sizing: border-box;
     width: 100%;
     max-width: 100%;
     text-align: left;
-    margin-left: 2%;
+    margin-left: 10px;
 }
+
 .text-area {
     border: none;
     outline: none;
     font-size: 1.4rem;
     font-weight: bolder;
-    margin-top: 3.5%;
+    margin-top: 20px;
     width: 90%;
     resize: none;
-    height: 80%;
 }
+
 .additional-post-options {
     border-top: 3px solid #696F79;
-    margin-top: 1%;
     width: 90%;
     display: flex;
     flex-direction: row;
-    margin-left: 4%;
-    padding-top: 1%;
+    margin-left: 20px;
+    padding-top: 5px;
 }
+
 .btn-post {
     width: 15%;
     height: 35px;
@@ -373,354 +376,409 @@ li.special-option {
     background-color: #f75959;
     border-radius: 10px 10px 10px 10px;
     border: none;
-    margin-left: 4%;
+    margin-left: 35px;
 }
+
 #post-options {
     color: #696F79;
-    margin-top: 0.5%;
-    margin-left: 2%;
+    margin-top: 5px;
+    margin-left: 10px;
 }
-.users-posts-container {
-    width: 100%;
-    height: 70%;
-    display: flex;
-    flex-direction: column;
-    margin-top: 2%;
-}
+
 .posts-cards-container {
-    margin-top: 2%;
+    margin-top: 20px;
 }
+
 .implemented-posts-boxes {
     background-color: white;
     width: 80%;
-    height: auto;
     margin: 0 auto;
-    margin-top: 2%;
-    margin-bottom: 2%;
+    margin-top: 20px;
+    margin-bottom: 35px;
     border-radius: 20px 20px 20px 20px;
     display: flex;
     flex-direction: column;
     box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
+
 .post-profile-details {
     display: flex;
     flex-direction: row;
-    margin-top: 2%;
+    margin-top: 15px;
     width: 100%;
 }
+
 .post-profile-details-img {
     width: 45px;
     height: 45px;
-    margin-left: 3%;
+    margin-left: 22px;
 }
+
 .user-written-post {
     width: 90%;
     height: auto;
-    margin-left: 4%;
+    margin: 0 auto;
     text-align: left;
-    padding: 2%;
+    padding: 12px;
     border: 1px solid #696F79;
     letter-spacing: 1px;
     border-radius: 20px 20px 20px 20px;
     box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
+
 .post-profile-details-txt {
     display: flex;
     flex-direction: column;
-    margin-left: 1%;
+    margin-left: 6px;
     width: 35%;
     flex-grow: 1;
 }
+
 .profile-det-name {
     font-size: 1.2rem;
     font-weight: 700;
     text-align: left;
 }
+
 .profile-det-date {
     font-size: 0.95rem;
     color: #696F79;
     font-weight: bolder;
     text-align: left;
 }
-.delete-post-box
-{
+
+.delete-post-box {
     justify-content: flex-end;
     text-align: right;
     flex-grow: 1;
     background: none;
     outline: none;
     border: none;
-    margin-right:2%;
+    margin-right: 10px;
 }
-#delete-post-icons{
+
+#delete-post-icons {
     font-size: 1.4rem;
 }
-#delete-post-icons:hover{
-    padding-right:8% ;
-    padding-top: 5%;
-    font-size: 1.4rem;
+
+#delete-post-icons:hover {
     color: red;
     cursor: pointer;
 }
+
 .post-caption-container {
-    margin-top: 1.4%;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     border-radius: 20px 20px 20px 20px;
     width: 100%;
+
 }
+
 .post-caption {
-    padding-top: 1%;
-    padding-left: 5%;
+    margin: 0 auto;
+    padding-top: 10px;
     letter-spacing: 1px;
     font-size: 1.1rem;
     text-align: left;
     width: 90%;
 }
+
 .caption-Image {
-    margin-left: 3%;
-    margin-top: 2%;
+    margin: 0 auto;
+    margin-top: 10px;
     width: 90%;
-    height: 60%;
     border-radius: 20px 20px 20px 20px;
 }
+
 .post-caption-options {
     display: flex;
     flex-direction: row;
     margin: 0 auto;
-    margin-top: 2%;
+    margin-top: 15px;
     margin-bottom: 10px;
     width: 40%;
 }
+
 #caption-icons-actions {
-    margin-left: 15%;
+    margin: 0 auto;
     font-size: 1.5rem;
 }
-#caption-icons-actions:hover{
+
+#caption-icons-actions:hover {
     cursor: pointer;
-    color:green;
-}
-#caption-icons-actions-special {
-    margin-left: 3%;
-    padding-top: 0.5%;
-    padding-bottom: 0.5%;
-    color: #f75959;
+    color: green;
 }
 
 .user-friends-groups-container {
     width: 25%;
     display: flex;
     flex-direction: column;
-    margin-top: 1.5%;
 }
+
 .groups-container {
+    width: 90%;
+    position: sticky;
+    top: 95px;
     display: flex;
     flex-direction: column;
-    width: 90%;
-    height: 300px;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    height: 290px;
     background-color: white;
-    border-radius: 20px 20px 20px 20px;
+    border-radius: 15px 15px 15px 15px;
+    margin-bottom: 50px;
 }
-.groups-container-title{
+
+.groups-container-title {
     display: flex;
     flex-direction: row;
-    margin-top: 3%;
+    margin-top: 8px;
 }
+
 .add-group-txt {
-    flex-grow: 1;
     text-align: left;
     font-size: 1.5rem;
     font-weight: 700;
-    padding-top: 0.5%;
-    padding-left: 3%;
+    padding-left: 5px;
+    letter-spacing: 1px;
 }
+
 #search-group-icon {
     color: #696F79;
-    flex-grow: 1;
-    padding-left: 10%;
-    margin-top: 1.2%;
+    padding-left: 90px;
+    margin-top: 3px;
     font-size: 1.5rem;
 }
-.enrolled-groups{
+
+.enrolled-groups {
     display: flex;
-    flex-direction:column;
-    margin-top: 4%;
-    height: auto;
+    flex-direction: column;
+    margin-top: 10px;
 }
-.enrolled-groups-icons-box{
+
+.enrolled-groups-icons-box {
     display: flex;
-    flex-direction:row;
-    padding: 2%;
-    margin-bottom:8%;
+    flex-direction: row;
+    padding: 4px;
+    margin-bottom: 15px;
 }
-#enrolled-groups-icons{
+
+#enrolled-groups-icons {
     width: 20%;
-    padding: 1%;
+    padding: 2px;
     color: #f75959;
 
 }
-.enrolled-groups-icon-txt{
+
+.enrolled-groups-icon-txt {
     font-weight: 700;
-    padding-top: 3%;
+    padding-top: 8px;
     font-size: 1.1rem;
     width: 80%;
-
 }
 
-@media screen and (max-width: 768px){
-    .main-container{
+.friends-container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    height: 310px;
+    background-color: white;
+    border-radius: 15px 15px 15px 15px;
+    position: sticky;
+    top: 405px;
+}
+
+.user-friends-img {
+    margin-left: 5px;
+    width: 45px;
+    height: 45px;
+}
+
+.add-friend-txt {
+    font-weight: 700;
+    padding-top: 10px;
+    font-size: 1.1rem;
+    width: 80%;
+}
+
+@media screen and (max-width: 768px) {
+    .main-container {
 
     }
-    .side-rectangle-container{
-        /*display: none;*/
+
+    .side-rectangle-container {
         width: 10%;
     }
-    #side-nav-icon-special,#side-nav-icon{
+
+    .icons {
+        margin-top: 30px;
+    }
+
+    #side-nav-icon-special, #side-nav-icon, #logout-icon {
         font-size: 1.6rem;
         width: 40px;
         height: 35px;
     }
-    #side-nav-icon-settings{
-        font-size: 1.6rem;
-        margin-top: 60%;
+
+    .logout-box {
+        margin-top: 5px;
     }
 
-    .pageHeader{
+    .pageHeader {
+        height: 60px;
+    }
 
+    .upper-nav1 {
+        width: 70%;
+        margin-left: 40px;
     }
-    .upper-nav1{
-        width: 60%;
-    }
-    .upper-nav{
+
+    .upper-nav {
         width: 100%;
-        margin-top: 3.2%;
+        margin-top: 16px;
+        padding: 0;
+        padding-bottom: 15px;
+        text-align: left;
+
     }
-    .upper-nav li{
+
+    .upper-nav li {
         font-size: 1rem;
+        margin-right: 45px;
     }
-    .profile-bar{
+
+    .profile-bar-container {
         display: none;
     }
-    .search-bar-container{
-        width: 38%;
-        height: 80%;
+
+    .search-bar-container {
+        width: 30%;
     }
-    .search-bar-box{
-        margin-top: 1.5%;
-        font-size: 0.88rem;
+    .search-bar-box {
+        width: 100%;
+        height: 40px;
+        margin-top: 5px;
+        margin-left: 6px;
     }
-    .btn-search{
-        margin-left: -14%;
+    .search-bar{
+        font-size: 0.75rem;
     }
-    .inner-body{
-    }
-    .leftRect{
-        /*position: sticky;*/
-        /*top: 0;*/
-        /*left: 0;*/
-    }
-    .profileDetails-container{
+    .inner-body {}
+    .leftRect {}
+
+    .profileDetails-container {
         flex-direction: column;
+        margin-top: 0;
     }
-    .profileImg{
+    .profileImg {
         margin: 0 auto;
         height: 45px;
         width: 45px;
     }
-    .profileName-container{
+
+    .profileName-container {
         width: 100%;
         text-align: center;
     }
-    .profileName,.profile-nickName{
+
+    .profileName, .profile-nickName {
         text-align: center;
     }
-    .profileName{
+
+    .profileName {
         font-size: 1rem;
     }
-    .profile-nickName{
+
+    .profile-nickName {
         font-size: 0.80rem;
     }
-    .side-options-box,.side-options-box-highlighted{
+
+    .side-options-box, .side-options-box-highlighted {
         margin-bottom: 15%;
     }
-    .side-options-box-hidden{
+
+    .side-options-box-hidden {
         display: flex;
         flex-direction: row;
     }
-    .side-options-text{
+
+    .side-options-text {
         margin-left: 20%;
         font-size: 1.05rem;
     }
-    .side-options-text-special{
+
+    .side-options-text-special {
         margin-left: 7%;
         font-size: 0.95rem;
     }
-    #side-options-Icons{
+
+    #side-options-Icons {
         font-size: 1.4rem;
     }
-    .logout{
-        width: 60%;
-    }
-    #logout-icon{
-        font-size: 1.4rem;
-        color: black;
-    }
-    .logout-txt{
-        font-size: 1.1rem;
-        color: black;
-    }
-    .creat-post-side{
+
+    .creat-post-side {
         width: 100%;
     }
-    .text-area{
+    .text-area {
         font-size: 1rem;
     }
-    .profile-img-user-post{
+
+    .profile-img-user-post {
         width: 45px;
         height: 45px;
     }
-    .btn-post{
+
+    .btn-post {
         font-size: 0.85rem;
         width: 20%;
         height: 25px;
+        margin-top: 5px;
+        margin-left: 5px;
     }
-    #post-options{
-       font-size: 1.5rem;
+
+    #post-options {
+        font-size: 1.5rem;
     }
-    .post-profile-details-img{
+
+    .post-profile-details-img {
         width: 35px;
         height: 35px;
     }
-    .profile-det-name{
+
+    .profile-det-name {
         font-size: 1.08rem;
     }
-    .profile-det-date{
+
+    .profile-det-date {
         font-size: 0.75rem;
     }
-    .user-written-post{
+
+    .user-written-post {
         font-size: 0.85rem;
     }
-    .post-caption{
+
+    .post-caption {
         font-size: 0.85rem;
     }
-    .user-friends-groups-container{
-      display: none;
+
+    .user-friends-groups-container {
+        display: none;
     }
 }
 
-@media screen and (max-width: 568px){
-    .side-rectangle-container{
+
+
+@media screen and (max-width: 568px) {
+    .side-rectangle-container {
         width: 16%;
     }
 
-    .side-nav-logo{
+    .side-nav-logo {
         width: 40px;
         height: 40px;
         margin-left: 16%;
     }
-    #side-nav-icon-special,#side-nav-icon{
+
+    #side-nav-icon-special, #side-nav-icon {
         font-size: 1.6rem;
         width: 40px;
         height: 35px;
@@ -730,84 +788,99 @@ li.special-option {
         width: 60%;
         margin-top: 25%;
     }
-    .logout-btn{
+    .logout-btn {
         width: 100%;
     }
-    #logout-icon{
+    #logout-icon {
         width: 100%;
     }
-    #side-nav-icon-settings{
+    #side-nav-icon-settings {
         font-size: 1.6rem;
         margin-top: 30%;
         margin-left: 20%;
     }
-    .pageHeader{
+    .pageHeader {}
 
-    }
-    .upper-nav1{
+    .upper-nav1 {
         display: none;
     }
-    .profile-bar{
+    .profile-bar {
         display: none;
     }
-    .search-bar-container{
-        margin: 0 auto;
-        margin-top: 2%;
+    .search-bar-container {
         width: 70%;
-        height: 80%;
+        height: 40px;
+        margin-left: 30px;
     }
-    .search-bar-box{
-        margin-top: 1.5%;
-        font-size: 0.88rem;
+    .search-bar-box {
+        width: 100%;
+        height: 40px;
+        margin-top: 5px;
+        margin-left: 6px;
+    }
+    .search-bar{
+        font-size: 0.75rem;
+    }
+    .inner-body {}
 
+    .leftRect {
+        display: none;
     }
-    .btn-search{
-        margin-left: -14%;
-    }
-    .inner-body{
 
-    }
-    .leftRect{
-       display: none;
-    }
-    .rightRect{
+    .rightRect {
         width: 100%;
     }
-    .creat-post-side{
+
+    .creat-post-side {
         width: 100%;
     }
-    .text-area{
+    .user-mind-post{
+        margin-top: 15px;
+    }
+
+    .text-area {
+        margin-top: 8px;
         font-size: 1rem;
     }
-    .profile-img-user-post{
+
+    .profile-img-user-post {
         width: 45px;
         height: 45px;
     }
-    .btn-post{
+
+    .btn-post {
         font-size: 0.85rem;
         width: 20%;
         height: 25px;
     }
-    #post-options{
+    #post-options {
         font-size: 1.5rem;
     }
-    .post-profile-details-img{
+
+    .post-profile-details-img {
         width: 35px;
         height: 35px;
+        margin-left: 8px;
     }
-    .profile-det-name{
+
+    .profile-det-name {
         font-size: 1.08rem;
     }
-    .profile-det-date{
+
+    .profile-det-date {
         font-size: 0.75rem;
     }
-    .user-written-post{
+
+    .user-written-post {
         font-size: 0.85rem;
     }
-    .post-caption{
+
+    .post-caption {
         font-size: 0.85rem;
+        padding: 0;
     }
-    .user-friends-groups-container{
+
+    .user-friends-groups-container {
         display: none;
     }
 }

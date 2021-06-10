@@ -78,13 +78,20 @@
     border-radius: 10px 10px 10px 10px;
     border: none;
 }
+.categories-icons-container-hidden{
+    display: flex;
+    flex-direction: column;
+}
 
 .categories-icons-container {
     width: 65%;
     display: flex;
     flex-direction: row;
-
     margin-left: 3%;
+}
+.categories-in-row{
+    display: flex;
+    flex-direction: row;
 }
 
 .categories-icons-box {
@@ -213,5 +220,209 @@
 }
 
 
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    #side-nav-icon-marketPlace {
+        font-size: 1.6rem;
+        width: 40px;
+        height: 35px;
+    }
+
+    .marketPlace-container {
+    }
+
+    .categories-box {
+
+    }
+
+    .categories-searching-box {
+        width: 22%;
+    }
+
+    .categories-title {
+        font-weight: 800;
+        font-size: 1.3rem;
+        margin-top: 5px;
+    }
+    .categories-search-bar-container {
+       display: none;
+    }
+
+    .categories-search-bar {
+        display: none;
+    }
+    .btn-categories-search {
+        margin-left: 30px;
+        width:30%;
+        height: 90%;
+    }
+    #search-icon-btn{
+        font-size: 1.2rem;
+    }
+
+    .categories-icons-container {
+        width: 78%;
+        display: flex;
+        flex-direction: row;
+        margin-left: 0;
+    }
+
+    .categories-icons-box {
+        margin-left: 1%;
+        width: 100%;
+        padding-top: 2%;
+    }
+
+    #categories-icons-action {
+        color: white;
+        background-color: #f75959;
+        width: 60%;
+        padding: 4%;
+        border-radius: 80px 80px 80px 80px;
+        font-size: 1.4rem;
+    }
+
+    .categories-icons-txt {
+        font-weight: 600;
+        font-size: 0.75rem;
+    }
+
+    .marketPlace-lowerpart-container {
+        margin-top: 3%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .marketPlace-lowerpart-box {
+        width: 35%;
+    }
+
+    #marketPlace-lowerpart-icon {
+        color: #f75959;
+        margin-right: 2%;
+        margin-top: 1%;
+    }
+
+    .marketPlace-lowerpart-txt {
+        font-weight: 800;
+        font-size: 1.2rem;
+        margin-top: 3%;
+    }
+
+    .marketPlace-location-box {
+        width: 30%;
+        height: 90%;
+        margin-left: 26%;
+
+    }
+    #marketPlace-location-icon {
+        margin-left: 4%;
+        color: black;
+    }
+
+    .marketPlace-location-txt {
+        font-size: 0.75rem;
+        font-weight: 800;
+        margin-left: 4%;
+        color: black;
+        margin-top: 2.8%;
+    }
+
+    .products-cards-container {
+        width: 80%;
+        grid-template-columns:repeat(2, 1fr);
+    }
+
+    .products-card-box {
+        height: 238px;
+    }
+    .products-card-img-box {
+        /*border: 1px solid red;*/
+    }
+    .products-card-img {
+        height: 140px;
+    }
+    .products-card-details {}
+
+    .product-name , .product-price,.product-location {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 568px){
+   .marketPlace-container{}
+    .categories-box{}
+
+   .categories-icons-container{
+        display: none;
+    }
+    .categories-title{
+        margin-left: 15%;
+    }
+    .categories-searching-box{
+        flex-direction: row;
+        width: 70%;
+        margin: 0 auto;
+        height: 90%;
+    }
+    .categories-search-bar-container{
+        margin-top: 0;
+        width: 40%;
+        display: flex;
+        padding: 0;
+        width: 40%;
+    }
+    .btn-categories-search {
+        margin: 0;
+        padding: 0;
+        margin-left: 4px;
+        margin-top: 2px;
+    }
+    #search-icon-btn{
+        font-size: 1rem;
+    }
+    .marketPlace-lowerpart-container {
+        flex-direction: column;
+    }
+
+    .marketPlace-lowerpart-box {
+        margin: 0 auto;
+        width: 50%;
+    }
+
+    #marketPlace-lowerpart-icon {}
+
+    .marketPlace-lowerpart-txt {}
+
+    .marketPlace-location-box {
+        margin-top: 2%;
+        width: 50%;
+    }
+    #marketPlace-location-icon {
+        margin-left: 4%;
+        color: black;
+    }
+
+    .marketPlace-location-txt {
+        font-size: 0.85rem;
+        margin-top: 5%;
+    }
+    .products-cards-container {
+        width: 80%;
+        grid-template-columns:repeat(1, 1fr);
+    }
+    .products-card-box{
+        margin: 0 auto;
+    }
+    .product-name , .product-price,.product-location {
+        font-size: 1rem;
+    }
+}
 
 

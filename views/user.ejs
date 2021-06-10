@@ -22,11 +22,9 @@
                 <i id="side-nav-icon" class="fa fa-bell-o fa-2x" aria-hidden="true"></i>
                 <i id="side-nav-icon" class="fa fa-calendar fa-2x" aria-hidden="true"></i>
                 <i  onclick="marketPlace()" id="side-nav-icon" class="fa fa-university fa-2x" aria-hidden="true"></i>
-                <i id="side-nav-icon-settings" class="fa fa-cogs fa-2x" aria-hidden="true"></i>
-                <form class="logout-hidden" method="post" action="/logout">
-                    <button class="logout-btn" type="submit">
-                        <i id="logout-icon" class="fa fa-sign-out" aria-hidden="true"></i>
-                    </button>
+                <i id="side-nav-icon" class="fa fa-cogs fa-2x" aria-hidden="true"></i>
+                <form class="logout-box" method="post" action="/logout">
+                        <i id="logout-icon" class="fa fa-sign-out fa-2x fa-rotate-180" aria-hidden="true"></i>
                 </form>
 
             </div>
@@ -36,10 +34,12 @@
     <div class="main-body-container">
         <header class="pageHeader">
             <div class="search-bar-container">
-                <input class="search-bar-box" type="search" placeholder="Search for friends here">
+                <div class="search-bar-box">
+                <input class="search-bar" type="search" placeholder="Search for friends here">
                 <button class="btn-search">
                     <i class="fa fa-search fa-1x" aria-hidden="true"></i>
                 </button>
+                </div>
             </div>
 
             <div class="upper-nav1">
@@ -51,17 +51,20 @@
                 </ul>
             </div>
 
-            <div class="profile-bar">
+            <div class="profile-bar-container">
+                <div class="profile-bar-box">
                 <% for (let i = 0; i < user.length; i++) { %>
                     <img class="profile-bar-Img" src="<%= user[i].image %>" alt="profilePicture">
                 <% } %>
                 <i id="dotsIcon" class="fa fa-ellipsis-v fa-2x" aria-hidden="true"></i>
+                </div>
             </div>
         </header>
         <div class="inner-body">
 
             <div class="leftRect">
 
+                <div class="sticky-box">
                 <div class="profileDetails-container">
                     <% for (let i = 0; i < user.length; i++) { %>
                         <img class="profileImg" src="<%= user[i].image %>" alt="profilePicture">
@@ -93,18 +96,12 @@
                         <p class="side-options-text">Groups</p>
                     </div>
                 </div>
-                <form class="logout" method="post" action="/logout">
-                   <button class="logout-btn" type="submit">
-                       <i id="logout-icon" class="fa fa-sign-out" aria-hidden="true"></i>
-                   </button>
-                    <p class="logout-txt">LogOut</p>
-                </form>
+                </div>
             </div>
 
             <div class="rightRect">
 
                 <div class="creat-post-side">
-
 
                     <div class="user-mind-post">
                         <% for (let i = 0; i < user.length; i++) { %>
@@ -217,32 +214,38 @@
                         </div>
                     </div>
 
+                    <div class="friends-container">
+                        <div class="groups-container-title">
+                            <p class="add-group-txt">Friends</p>
+                            <i id="search-group-icon" class="fa fa-search fa-2x" aria-hidden="true"></i>
+                        </div>
+                        <div class="enrolled-groups">
+                            <div class="enrolled-groups-icons-box">
+                                <img class="user-friends-img" src="/images/bedo-profilePic.png" alt="friendPic" width="40" height="40">
+                                <P class="add-friend-txt">Bedo Fares</P>
+                            </div>
+                            <div class="enrolled-groups-icons-box">
+                                <img class="user-friends-img" src="/images/girl-profile.png" alt="friendPic" width="40" height="40">
+                                <P class="add-friend-txt">Hannah manuel</P>
+                            </div>
+                            <div class="enrolled-groups-icons-box">
+                                <img class="user-friends-img" src="/images/friend1-profilePic.png" alt="friendPic" width="40" height="40">
+                                <P class="add-friend-txt">mark sebastain</P>
+                            </div>
+                            <div class="enrolled-groups-icons-box">
+                                <img class="user-friends-img" src="/images/friend2-profilePic.png" alt="friendPic" width="40" height="40">
+                                <P class="add-friend-txt">sarah krutz</P>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-
-
             </div>
         </div>
     </div>
 
 </div>
 <script>
-    // var today = new Date();
-    // var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-    // var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-    // var dateTime = date+' '+time;
-    //
-    // document.getElementsByClassName('profile-det-nickname')
-
-
-    // var x = document.getElementsByClassName('profile-det-nickname')
-    // for(i=0;i<x.length;i++){
-    //     x[i].innerHTML = dateTime;
-    // }
-
-
-    // document.querySelector('.profile-det-nickname').innerHTML = 'date';
-
-
     <% for (let i = 0; i < user.length; i++) { %>
     function marketPlace(){
         window.location.replace("/users/<%= user[i].id %>/shop/marketPlace")
