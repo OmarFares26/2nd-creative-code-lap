@@ -25,10 +25,6 @@ function getUser(cb, id) {
 
 function getProduct(cb,id) {
    let sql = "SELECT * FROM platformUsers INNER JOIN productsCards WHERE platformUsers.id ="+ parseInt(id);
-   //    let sql = "SELECT * FROM productsCards" ;
-    //let sql = "SELECT p.*, c.* FROM platformUsers p, productsCards c WHERE p.id = c.id";
-
-
     db.query(sql, function (err, product, fields) {
         if (err) {
             cb(err)
@@ -46,9 +42,7 @@ function sendPost(cb,userInput,id) {
         }
         cb(null)
     })
-
-    //let sql = "INSERT INTO usersPosts (Written_Posts) VALUES (${db.escape(userInput.writePost)})";
-   // console.log(sql
+    // console.log(sql
 }
 
 function getPosts(cb,id){

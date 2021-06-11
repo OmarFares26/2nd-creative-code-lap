@@ -16,9 +16,11 @@
 
     <div class="side-rectangle-container">
         <div class="side-nav-rectangle">
-            <img class="side-nav-logo" src="/images/logo.png" alt="logo">
+            <div class="side-nav-logo-box">
+                <img class="side-nav-logo" src="/images/logo.png" alt="logo">
+            </div>
             <div class="icons">
-                <i id="side-nav-icon" class="fa fa-home fa-2x" aria-hidden="true"></i>
+                <i onclick="feedPage()" id="side-nav-icon" class="fa fa-home fa-2x" aria-hidden="true"></i>
                 <i id="side-nav-icon" class="fa fa-users fa-2x" aria-hidden="true"></i>
                 <i id="side-nav-icon" class="fa fa-comments-o fa-2x" aria-hidden="true"></i>
                 <i id="side-nav-icon" class="fa fa-bell-o fa-2x" aria-hidden="true"></i>
@@ -26,7 +28,9 @@
                 <i id="side-nav-icon-marketPlace" class="fa fa-university fa-2x" aria-hidden="true"></i>
                 <i id="side-nav-icon" class="fa fa-cogs fa-2x" aria-hidden="true"></i>
                 <form class="logout-box" method="post" action="/logout">
-                    <i id="logout-icon" class="fa fa-sign-out fa-2x fa-rotate-180" aria-hidden="true"></i>
+                    <button type="submit" class="logout-btn">
+                        <i id="logout-icon" class="fa fa-sign-out fa-2x fa-rotate-180" aria-hidden="true"></i>
+                    </button>
                 </form>
             </div>
         </div>
@@ -46,7 +50,7 @@
 
             <div class="upper-nav1">
                 <ul class="upper-nav">
-                    <li>Home</li>
+                    <li onclick="feedPage()">Home</li>
                     <li>Friends</li>
                     <li>Events</li>
                     <li class="special-option">Market place</li>
@@ -65,31 +69,33 @@
 
             <div class="leftRect">
 
-                <div class="profileDetails-container">
+                <div class="sticky-box">
+                    <div class="profileDetails-container">
 
-                    <img class="profileImg" src="<%= product[0].image %>" alt="profilePicture">
-                    <div class="profileName-container">
-                        <p class="profileName"><%= product[0].name %></p>
-                        <p class="profile-nickName"><%= product[0].username %></p>
-                    </div>
+                        <img class="profileImg" src="<%= product[0].image %>" alt="profilePicture">
+                        <div class="profileName-container">
+                            <p class="profileName"><%= product[0].name %></p>
+                            <p class="profile-nickName"><%= product[0].username %></p>
+                        </div>
 
-                </div>
-                <div class="side-options-container">
-                    <div class="side-options-box-highlighted">
-                        <i id="side-options-Icons" class="fa fa-th-large fa-2x" aria-hidden="true"></i>
-                        <p class="side-options-text">Feed</p>
                     </div>
-                    <div class="side-options-box">
-                        <i id="side-options-Icons" class="fa fa-users fa-2x" aria-hidden="true"></i>
-                        <p class="side-options-text-special">Find Friends</p>
-                    </div>
-                    <div class="side-options-box">
-                        <i id="side-options-Icons" class="fa fa-comments-o fa-2x" aria-hidden="true"></i>
-                        <p class="side-options-text">Chat</p>
-                    </div>
-                    <div class="side-options-box">
-                        <i id="side-options-Icons" class="fa fa-bell-o fa-2x" aria-hidden="true"></i>
-                        <p class="side-options-text-special">Notifications</p>
+                    <div class="side-options-container">
+                        <div class="side-options-box-highlighted">
+                            <i id="side-options-Icons" class="fa fa-th-large fa-2x" aria-hidden="true"></i>
+                            <p class="side-options-text">Feed</p>
+                        </div>
+                        <div class="side-options-box">
+                            <i id="side-options-Icons" class="fa fa-users fa-2x" aria-hidden="true"></i>
+                            <p class="side-options-text-special">Find Friends</p>
+                        </div>
+                        <div class="side-options-box">
+                            <i id="side-options-Icons" class="fa fa-comments-o fa-2x" aria-hidden="true"></i>
+                            <p class="side-options-text">Chat</p>
+                        </div>
+                        <div class="side-options-box">
+                            <i id="side-options-Icons" class="fa fa-bell-o fa-2x" aria-hidden="true"></i>
+                            <p class="side-options-text-special">Notifications</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -173,5 +179,12 @@
     </div>
 </div>
 
+<script>
+    <% for (let i = 0; i < user.length; i++) { %>
+    function feedPage() {
+        window.location.replace("/users/<%= user[i].id %>")
+    }
+    <% } %>
+</script>
 </body>
 </html>

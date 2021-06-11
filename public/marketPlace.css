@@ -1,6 +1,6 @@
-#side-nav-icon-marketPlace{
-    margin-left: 18%;
-    margin-bottom: 40%;
+#side-nav-icon-marketPlace {
+    margin: 0 auto;
+    margin-bottom: 25px;
     padding: 8px 8px 8px 8px;
     border-radius: 10px 10px 10px 10px;
     background-color: white;
@@ -8,6 +8,7 @@
     width: 50px;
     height: 45px;
 }
+
 .marketPlace-container {
     width: 100%;
     height: 100%;
@@ -78,7 +79,8 @@
     border-radius: 10px 10px 10px 10px;
     border: none;
 }
-.categories-icons-container-hidden{
+
+.categories-icons-container-hidden {
     display: flex;
     flex-direction: column;
 }
@@ -89,7 +91,8 @@
     flex-direction: row;
     margin-left: 3%;
 }
-.categories-in-row{
+
+.categories-in-row {
     display: flex;
     flex-direction: row;
 }
@@ -219,53 +222,53 @@
     font-size: 1rem;
 }
 
+/*Media queries for laptop screen*/
+@media screen and (max-width: 1024px){
+    #categories-icons-action {
+        color: white;
+        background-color: #f75959;
+        width: 60%;
+        padding: 4%;
+        border-radius: 80px 80px 80px 80px;
+        font-size: 1.4rem;
+    }
+    .btn-categories-search{
+        margin-left: -20px;
+    }
+    .product-name, .product-price, .product-location {
+        font-size: 1rem;
+    }
+}
 
-
-
-
-
-
-
-
+/*Media queries for tablet screen*/
 @media screen and (max-width: 768px) {
     #side-nav-icon-marketPlace {
         font-size: 1.6rem;
         width: 40px;
         height: 35px;
     }
-
-    .marketPlace-container {
-    }
-
-    .categories-box {
-
-    }
-
     .categories-searching-box {
         width: 22%;
     }
-
     .categories-title {
         font-weight: 800;
         font-size: 1.3rem;
         margin-top: 5px;
     }
     .categories-search-bar-container {
-       display: none;
+        display: none;
     }
-
     .categories-search-bar {
         display: none;
     }
     .btn-categories-search {
         margin-left: 30px;
-        width:30%;
+        width: 30%;
         height: 90%;
     }
-    #search-icon-btn{
+    #search-icon-btn {
         font-size: 1.2rem;
     }
-
     .categories-icons-container {
         width: 78%;
         display: flex;
@@ -278,7 +281,6 @@
         width: 100%;
         padding-top: 2%;
     }
-
     #categories-icons-action {
         color: white;
         background-color: #f75959;
@@ -321,6 +323,7 @@
         margin-left: 26%;
 
     }
+
     #marketPlace-location-icon {
         margin-left: 4%;
         color: black;
@@ -342,85 +345,73 @@
     .products-card-box {
         height: 238px;
     }
+
     .products-card-img-box {
         /*border: 1px solid red;*/
     }
+
     .products-card-img {
         height: 140px;
     }
-    .products-card-details {}
-
-    .product-name , .product-price,.product-location {
+    .product-name, .product-price, .product-location {
         font-size: 1rem;
     }
 }
 
-@media screen and (max-width: 568px){
-   .marketPlace-container{}
-    .categories-box{}
+/*Media queries for mobile screen*/
+@media screen and (max-width: 568px) {
+    .marketPlace-container {
+    }
 
-   .categories-icons-container{
+    .categories-box {
         display: none;
     }
-    .categories-title{
-        margin-left: 15%;
-    }
-    .categories-searching-box{
-        flex-direction: row;
-        width: 70%;
-        margin: 0 auto;
-        height: 90%;
-    }
-    .categories-search-bar-container{
-        margin-top: 0;
-        width: 40%;
-        display: flex;
-        padding: 0;
-        width: 40%;
-    }
-    .btn-categories-search {
-        margin: 0;
-        padding: 0;
-        margin-left: 4px;
-        margin-top: 2px;
-    }
-    #search-icon-btn{
-        font-size: 1rem;
-    }
+
     .marketPlace-lowerpart-container {
         flex-direction: column;
     }
 
     .marketPlace-lowerpart-box {
+        margin-left: 0;
         margin: 0 auto;
-        width: 50%;
+        width: 60%;
     }
 
-    #marketPlace-lowerpart-icon {}
+    #marketPlace-lowerpart-icon {
+        margin-right: 0;
+    }
 
-    .marketPlace-lowerpart-txt {}
+    .marketPlace-lowerpart-txt {
+        margin-right: 0;
+        margin-left: 5px;
+    }
 
     .marketPlace-location-box {
-        margin-top: 2%;
-        width: 50%;
+        margin-left: 0;
+        margin: 0 auto;
+        margin-top: 10px;
+        width: 80%;
     }
+
     #marketPlace-location-icon {
-        margin-left: 4%;
-        color: black;
+        margin-left: 10%;
     }
 
     .marketPlace-location-txt {
-        font-size: 0.85rem;
-        margin-top: 5%;
+        font-size: 1rem;
+        margin-top: 3%;
     }
+
     .products-cards-container {
         width: 80%;
         grid-template-columns:repeat(1, 1fr);
     }
-    .products-card-box{
+
+    .products-card-box {
         margin: 0 auto;
     }
-    .product-name , .product-price,.product-location {
+
+    .product-name, .product-price, .product-location {
         font-size: 1rem;
     }
 }

@@ -17,14 +17,6 @@ router.get('/', (req, res) => {
     res.send('Hello World!')
 });
 
-
-
-// router.get('/:id/marketPlace',userController.getProduct);
-// router.get('/marketPlace', (req, res) => {
-//     res.render('marketPlace')
-// });
-
-
 router.route('/login')
     .get((req, res) => {
         res.render('login')

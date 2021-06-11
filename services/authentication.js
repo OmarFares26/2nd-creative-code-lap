@@ -15,7 +15,7 @@ function authenticateUser({username, password}, users, res) {
         res.cookie('accessToken', accessToken);
         res.redirect('/users/' + user.id)
     } else {
-        res.send('Username or password incorrect');
+        res.send('Username or password incorrect')
     }
 }
 

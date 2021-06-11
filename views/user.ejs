@@ -9,12 +9,13 @@
     <link rel="stylesheet" type="text/css" href="/feedPage.css">
     <title>FEED PAGE</title>
 </head>
-
-
+<body>
 <div class="main-container">
     <div class="side-rectangle-container">
         <div class="side-nav-rectangle">
+            <div class="side-nav-logo-box">
             <img class="side-nav-logo" src="/images/logo.png" alt="logo">
+            </div>
             <div class="icons">
                 <i id="side-nav-icon-special" class="fa fa-home fa-2x" aria-hidden="true"></i>
                 <i id="side-nav-icon" class="fa fa-users fa-2x" aria-hidden="true"></i>
@@ -24,7 +25,9 @@
                 <i  onclick="marketPlace()" id="side-nav-icon" class="fa fa-university fa-2x" aria-hidden="true"></i>
                 <i id="side-nav-icon" class="fa fa-cogs fa-2x" aria-hidden="true"></i>
                 <form class="logout-box" method="post" action="/logout">
+                        <button type="submit" class="logout-btn">
                         <i id="logout-icon" class="fa fa-sign-out fa-2x fa-rotate-180" aria-hidden="true"></i>
+                        </button>
                 </form>
 
             </div>
@@ -47,7 +50,7 @@
                     <li class="special-option">Home</li>
                     <li>Friends</li>
                     <li>Events</li>
-                    <li>Market place</li>
+                    <li onclick="marketPlace()">Market place</li>
                 </ul>
             </div>
 
@@ -137,9 +140,6 @@
                                         <p class="profile-det-name"><%= user[i].name %></p>
                                         <p class="profile-det-date">Just now</p>
                                     </div>
-                                     <!--<div class="delete-post-box">-->
-                                    <!--<i id="delete-post-icons" class="fa fa-times" aria-hidden="true"></i>-->
-                                    <!--</div>-->
                                 <% } %>
                             </div>
                             <div class="post-caption-container">

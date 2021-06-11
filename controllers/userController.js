@@ -7,27 +7,22 @@ function getUsers(req, res, next) {
         if (err) {
             res.sendStatus(500) //this is just for error handling
         }
-        res.render('users', {users});
+        res.render('test', {users});
     });
 }
-
-// function getUser(req, res, next) {
-//     userModel.getUser((err, user) => {
-//         if (err) {
-//             res.sendStatus(500) //this is just for error handling
-//         }
-//         res.render('user', {posts: null, user: user});
-//     }, req.params.id);
-// }
 
 function getProduct(req, res, next) {
     userModel.getProduct((err, product) => {
         if (err) {
             res.sendStatus(500) //this is just for error handling
         }
-        res.render('marketPlace', {product});
+        userModel.getUser((err, user) => {
+            if (err) {
+                res.sendStatus(500) //this is just for error handling
+            }
+        res.render('marketPlace', {product:product , user:user});
     },req.params.id);
-}
+},req.params.id)}
 
 function sendPost(req, res, next) {
     userModel.sendPost((err) => {
@@ -68,7 +63,6 @@ function deletePost(req, res, next) {
 
 module.exports = {
     getUsers,
-    // getUser,
     getProduct,
     sendPost,
     getPosts,
