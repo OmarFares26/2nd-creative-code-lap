@@ -7,7 +7,6 @@ const authenticationService = require('../services/authentication');
 router.use(authenticationService.authenticateJWT);
 
 
- router.get('/',userController.getUsers);
 
 router.get('/:id',userController.getPosts);
 

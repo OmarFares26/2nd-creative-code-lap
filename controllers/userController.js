@@ -1,24 +1,16 @@
 //require the userModel in the controller to import its functions
 const userModel = require("../models/userModel");
 
-
-function getUsers(req, res, next) {
-    userModel.getUsers((err, users) => {
-        if (err) {
-            res.sendStatus(500) //this is just for error handling
-        }
-        res.render('test', {users});
-    });
-}
-
 function getProduct(req, res, next) {
     userModel.getProduct((err, product) => {
         if (err) {
-            res.sendStatus(500) //this is just for error handling
+            //this is just for error handling
+            res.sendStatus(500)
         }
         userModel.getUser((err, user) => {
             if (err) {
-                res.sendStatus(500) //this is just for error handling
+                //this is just for error handling
+                res.sendStatus(500)
             }
         res.render('marketPlace', {product:product , user:user});
     },req.params.id);
@@ -27,7 +19,8 @@ function getProduct(req, res, next) {
 function sendPost(req, res, next) {
     userModel.sendPost((err) => {
         if (err) {
-            res.sendStatus(500) //this is just for error handling
+            //this is just for error handling
+            res.sendStatus(500)
         }
         res.redirect('/users/'+req.params.id);
     }, req.body , req.params.id);
@@ -35,7 +28,8 @@ function sendPost(req, res, next) {
 function getPosts(req, res, next) {
     userModel.getPosts((err, posts) => {
         if (err) {
-            res.sendStatus(500) //this is just for error handling
+            //this is just for error handling
+            res.sendStatus(500)
         }
         // console.log(posts)
         userModel.getUser((err, user) => {
@@ -53,6 +47,7 @@ function deletePost(req, res, next) {
         req.params.id
         , (err, posts) => {
             if (err) {
+                //this is just for error handling
                 return  res.sendStatus(500)
             }
             console.log(posts)
@@ -62,7 +57,6 @@ function deletePost(req, res, next) {
 
 
 module.exports = {
-    getUsers,
     getProduct,
     sendPost,
     getPosts,

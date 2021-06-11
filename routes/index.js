@@ -12,12 +12,12 @@ const userModel = require('../models/userModel');
 
 
 
-//Testing that we can get stuff to be viewed on screen
-router.get('/', (req, res) => {
-    res.send('Hello World!')
-});
+ //Testing that we can get stuff to be viewed on screen
+// router.get('/', (req, res) => {
+//     res.send('Hello World!')
+// });
 
-router.route('/login')
+router.route('/')
     .get((req, res) => {
         res.render('login')
     })
@@ -32,7 +32,7 @@ router.route('/login')
 
 router.post('/logout', (req, res) => {
     res.cookie('accessToken', '', {maxAge: 0});
-    res.redirect('/login')
+    res.redirect('/')
 })
 
 

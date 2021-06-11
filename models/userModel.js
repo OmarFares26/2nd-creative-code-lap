@@ -6,7 +6,7 @@ function getUsers(cb) {
     db.query("SELECT * FROM platformUsers ", function (err, users, fields) {
         if (err) {
             cb(err)
-        } //this is just for error handling
+        }
         // console.log(users);
         cb(null, users)
     });
@@ -36,13 +36,14 @@ function getProduct(cb,id) {
 
 function sendPost(cb,userInput,id) {
     // console.log(userInput)
-    db.query(`INSERT INTO usersPosts (Written_Posts , userId) VALUES (${db.escape(userInput.writePost)},${db.escape(id)})`, (err) =>{
+    let sql = "INSERT INTO usersPosts  (Written_Posts , userId) VALUES ('"+userInput.writePost+"','"+id+"')";
+    // db.query(`INSERT INTO usersPosts (Written_Posts , userId) VALUES (${db.escape(userInput.writePost)},${db.escape(id)})`, (err) =>{
+    db.query(sql, function (err){
         if (err) {
             cb(err)
         }
         cb(null)
     })
-    // console.log(sql
 }
 
 function getPosts(cb,id){
