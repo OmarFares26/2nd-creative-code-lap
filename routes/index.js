@@ -37,13 +37,13 @@ router.post('/logout', (req, res) => {
 
 
 
-router.get('/cookies', (req, res) => {
-    //read cookie
-    console.log(req.cookies);
-    //set cookie
-    res.cookie('myCookie','Hello world');
-    res.send('cookies was set');
-});
+// router.get('/cookies', (req, res) => {
+//     //read cookie
+//     console.log(req.cookies);
+//     //set cookie
+//     res.cookie('myCookie','Hello world');
+//     res.send('cookies was set');
+// });
 
 
 

@@ -8,7 +8,7 @@ function getUsers(cb) {
             cb(err)
         }
         // console.log(users);
-        cb(null, users)
+        cb(null, users);
     });
 }
 
