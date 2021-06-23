@@ -150,6 +150,11 @@ body {
     letter-spacing: 1px;
     font-weight: 700;
 }
+.credentials{
+    color: #8692A6;
+    text-align: center;
+    width: 100%;
+}
 .form-loginBtn{
     padding: 0.5rem;
 }
