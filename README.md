@@ -1,3 +1,3 @@
-# 2nd creative code lap
+# Simple Social media platform
 
-This is the project for the second creative code laps 
+This is a univeristy project , where i created a fullstack simple social media platform using Html5,CSS,Node.js and MYSQL. 
